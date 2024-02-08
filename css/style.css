@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* regola di reset */
+
+.test{
+    border: 1px solid red;
+
+}
+
+.test-2{
+    border: 1px solid black;
+    
+}
+
+.my-color{
+    background-color: #193A4A ;
+}
+
+#griglia{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* height: calc(700px / 10);
+    width: calc(700px / 10); */
+
+    border: 1px solid black;
+
+    background-color: #3F87AE ;
+
+
+}
+
+#griglia.easy .square{
+    height: calc(700px / 10);
+    width: calc(700px / 10);
+
+}
+
+#griglia.medium .square {
+
+    height: calc(700px / 9);
+    width: calc(700px / 9);
+}
+
+#griglia.difficult .square {
+    height: calc(700px / 7);
+    width: calc(700px / 7);
+}
+
+
+
+.my-container{
+    width: 700px ;
+    
+    
+    
+    
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+
+    
+}
+
+
+
+.action{
+    background-color: #62D3A4;
+}
+
+#under{
+    color: blue;
+    text-decoration: underline;
+}
