@@ -87,18 +87,19 @@ playerButton.addEventListener("click", function () {
 
     const cellsArray = []
 
-    while (cellsArray.length < 16){
+    while (cellsArray.length <= 16){
 
         const newNumber = randomNumber;
-        if (! cellsArray.includes(randomNumber)){
+        if (! cellsArray.includes(newNumber)){
             
-            cellsArray.push(randomNumber)
+            cellsArray.push(newNumber)
         }
         console.log(cellsArray)
         
-        
     }
     
+    return cellsArray;
+    console.log(cellsArray)
 
     
 
