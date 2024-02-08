@@ -1,15 +1,15 @@
 
-// L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
+// Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco (attenzione: non bisogna copiare tutta la cartella dell'esercizio ma solo l'index.html, e le cartelle js/ css/ con i relativi script e fogli di stile, per evitare problemi con l'inizializzazione di git).
 
-// Ogni cella ha un numero progressivo, da 1 a 100.
+// Il computer deve generare 16 numeri casuali e inserirli in un array, in base al range della difficoltà prescelta (se abbiamo scelto facile l'array conterrà numeri casuali da 1 a 100, se invece abbiamo scelto difficile l'array dovrà contenerne da 1 a 49): questi rappreseranno le posizioni delle nostre bombe :bomba:.
 
-// Ci saranno quindi 10 caselle per ognuna delle 10 righe.
+// Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
 
-// Quando l'utente clicca su ogni cella,
+// In seguito l'utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina. Altrimenti la cella cliccata si colora di azzurro e l'utente può continuare a cliccare sulle altre celle.
 
-//  la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+// La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
 
-// Potete realizzare lo stile che volete, sin quando tutto è leggibile con facilità :muscolo::carnagione-2:
+// Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
 
 const playerButton = document.querySelector("#player");
 
@@ -72,38 +72,12 @@ for (let i = 1; i <= numberCell; i++){
 })
 
 
-// const gridElement = document.querySelector(`#griglia`)
-
-// for (let i = 1; i <= 100; i++){
-
-//     const newElement = document.createElement("div")
-//     newElement.classList.add("square")
-//     console.log(newElement)
-//     newElement.innerHTML = i;
-
-//     newElement.addEventListener("click", function (){
-        
-//         this.classList.toggle("action")
-
-
-
-//     })
 
 
 
 
 
 
-//     gridElement.append(newElement)
-// }
 
-// const serialNumber = Numbers ();
-
-// function Numbers() {
-//     for (i = 1; i < 100; i++){
-
-//         con)
-//     }
-// }
 
 
