@@ -55,12 +55,13 @@ playerButton.addEventListener("click", function () {
 
 
 
-
+        // l'utente clicca sulla cella
 
         newElement.addEventListener("click", function () {
 
             this.classList.add("action")
 
+            
 
 
         })
@@ -72,47 +73,45 @@ playerButton.addEventListener("click", function () {
 
 
 
+
+
         gridElement.append(newElement)
     }
 
-    let randomNumber;
+    
 
-    for (let i = 0; i <= 16; i++) {
+    const bombsArray = []
 
-        randomNumber = Math.floor(Math.random()* numberCell) + 1;
+    const totalBoombs = 16;
 
-        console.log("questo è il random Number " + randomNumber)
+    while (bombsArray.length < totalBoombs){
 
-    }
+        const randomNumber = Math.floor(Math.random()* numberCell);
 
-    const cellsArray = []
-
-    while (cellsArray.length <= 16){
-
-        const newNumber = randomNumber;
-        if (! cellsArray.includes(newNumber)){
+        
+        if (! bombsArray.includes(randomNumber)){
             
-            cellsArray.push(newNumber)
+            bombsArray.push(randomNumber)
         }
-        console.log(cellsArray)
         
     }
     
-    return cellsArray;
-    console.log(cellsArray)
+    console.log(bombsArray)
+
+   
 
     
-
-    
-
-    
-
-    
-
-
-
 
 })
+    
+
+    
+
+    
+
+
+
+
 
 
 
