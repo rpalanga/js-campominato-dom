@@ -65,6 +65,9 @@ playerButton.addEventListener("click", function () {
             if (bombsArray.includes(i)){
                 
                 newElement.classList.add("bomb")
+                alert("Hai perso")
+                
+                
             }
 
         })
@@ -106,6 +109,23 @@ playerButton.addEventListener("click", function () {
     
 
 })
+
+// function createCounter() {
+//     let tries = 0;
+//     return function () {
+//         tries++;
+//         return tries;
+//     }
+    
+// }
+// console.log(createCounter())
+
+// let Counter = createCounter();
+// document.getElementById("button-counter").innerHTML = `hai cliccato ${Counter}`
+// console.log(Counter)
+
+
+
     
 
     
