@@ -57,6 +57,7 @@ playerButton.addEventListener("click", function () {
 
 
         // l'utente clicca sulla cella
+        
 
         newElement.addEventListener("click", function () {
 
@@ -67,6 +68,8 @@ playerButton.addEventListener("click", function () {
                 newElement.classList.add("bomb")
                 alert("Hai perso")
                 
+                // gridElement.innerHTML = "";
+
                 
             }
 
@@ -110,14 +113,15 @@ playerButton.addEventListener("click", function () {
 
 })
 
-// function createCounter() {
-//     let tries = 0;
-//     return function () {
-//         tries++;
-//         return tries;
-//     }
+function createCounter() {
+    let tries = 0;
+    return function () {
+        tries++;
+        return tries;
+    }
     
-// }
+}
+
 // console.log(createCounter())
 
 // let Counter = createCounter();
