@@ -1,5 +1,6 @@
 
-// Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco (attenzione: non bisogna copiare tutta la cartella dell'esercizio ma solo l'index.html, e le cartelle js/ css/ con i relativi script e fogli di stile, per evitare problemi con l'inizializzazione di git).
+// Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco 
+// (attenzione: non bisogna copiare tutta la cartella dell'esercizio ma solo l'index.html, e le cartelle js/ css/ con i relativi script e fogli di stile, per evitare problemi con l'inizializzazione di git). VV
 
 // Il computer deve generare 16 numeri casuali e inserirli in un array, in base al range della difficoltà prescelta (se abbiamo scelto facile l'array conterrà numeri casuali da 1 a 100,
 //  se invece abbiamo scelto difficile l'array dovrà contenerne da 1 a 49): questi rappreseranno le posizioni delle nostre bombe :bomba:.
@@ -76,12 +77,32 @@ playerButton.addEventListener("click", function () {
 
     let randomNumber;
 
-    for (let i = 1; i <= 16; i++) {
+    for (let i = 0; i <= 16; i++) {
 
-        randomNumber = Math.floor(Math.random() * numberCell + 1);
+        randomNumber = Math.floor(Math.random()* numberCell) + 1;
+
         console.log("questo è il random Number " + randomNumber)
 
     }
+
+    const cellsArray = []
+
+    while (cellsArray.length < 16){
+
+        const newNumber = randomNumber;
+        if (! cellsArray.includes(randomNumber)){
+            
+            cellsArray.push(randomNumber)
+        }
+        console.log(cellsArray)
+        
+        
+    }
+    
+
+    
+
+    
 
     
 
