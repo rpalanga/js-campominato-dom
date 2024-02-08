@@ -1,7 +1,9 @@
 
 // Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco (attenzione: non bisogna copiare tutta la cartella dell'esercizio ma solo l'index.html, e le cartelle js/ css/ con i relativi script e fogli di stile, per evitare problemi con l'inizializzazione di git).
 
-// Il computer deve generare 16 numeri casuali e inserirli in un array, in base al range della difficoltà prescelta (se abbiamo scelto facile l'array conterrà numeri casuali da 1 a 100, se invece abbiamo scelto difficile l'array dovrà contenerne da 1 a 49): questi rappreseranno le posizioni delle nostre bombe :bomba:.
+// Il computer deve generare 16 numeri casuali e inserirli in un array, in base al range della difficoltà prescelta (se abbiamo scelto facile l'array conterrà numeri casuali da 1 a 100,
+//  se invece abbiamo scelto difficile l'array dovrà contenerne da 1 a 49): questi rappreseranno le posizioni delle nostre bombe :bomba:.
+
 
 // Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
 
@@ -13,7 +15,7 @@
 
 const playerButton = document.querySelector("#player");
 
-playerButton.addEventListener("click", function(){
+playerButton.addEventListener("click", function () {
     const gridElement = document.querySelector(`#griglia`)
 
 
@@ -22,8 +24,8 @@ playerButton.addEventListener("click", function(){
 
     let levelGame = document.querySelector("#level")
 
-    if (levelGame.value == "easy" ) {
-        
+    if (levelGame.value == "easy") {
+
         numberCell = 100;
 
     } else if (levelGame.value == "medium") {
@@ -38,37 +40,56 @@ playerButton.addEventListener("click", function(){
     gridElement.innerHTML = "";
 
 
-for (let i = 1; i <= numberCell; i++){
+    for (let i = 1; i <= numberCell; i++) {
 
-    const newElement = document.createElement("div")
-    newElement.classList.add("square")
+        const newElement = document.createElement("div")
+        newElement.classList.add("square")
 
-    console.log(newElement)
+        console.log(newElement)
 
-    newElement.innerHTML = i;
-
-
-   
+        newElement.innerHTML = i;
 
 
+
+
+
+
+
+
+        newElement.addEventListener("click", function () {
+
+            this.classList.add("action")
+
+
+
+        })
+
+
+
+
+
+
+
+
+        gridElement.append(newElement)
+    }
+
+    let randomNumber;
+
+    for (let i = 1; i <= 16; i++) {
+
+        randomNumber = Math.floor(Math.random() * numberCell + 1);
+        console.log("questo è il random Number " + randomNumber)
+
+    }
 
     
 
-    newElement.addEventListener("click", function (){
-        
-        this.classList.toggle("action")
-
-
-
-    })
+    
 
 
 
 
-
-
-    gridElement.append(newElement)
-}
 })
 
 
